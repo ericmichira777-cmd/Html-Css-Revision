@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReviseWebDesign— HTML & CSS Cheat Code</title>
+  <meta name="description" content="A compact, hands-on revision deck for the most important HTML5 and CSS3 concepts." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ====== HEADER / NAV ======= -->
+  <header class="site-header">
+    <a href="#top" class="brand">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-name">Revise<strong>Web</strong></span>
+          <br><span style="font-size:small;color:cyan;display:block;">by Eric</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#html" class="nav-link">HTML</a>
+      <a href="#css" class="nav-link">CSS</a>
+      <a href="#playground" class="nav-link">Playground</a>
+      <a href="https://developer.mozilla.org/" target="_blank" rel="noopener" class="nav-link nav-cta">MDN ↗</a>
+    </nav>
+  </header>
+
+ <!-- ========= HERO ========== -->
+  <section id="top" class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Beginner revision deck</p>
+      <h1>Two languages. <span class="grad">One playground.</span></h1>
+      <p class="lede">
+        A quick, opinionated tour of the HTML tags and CSS ideas you actually use.
+        Skim it, break it, remix it.
+      </p>
+      <div class="hero-cta">
+        <a href="#html" class="btn btn-primary">Revise HTML →</a>
+        <a href="#css" class="btn btn-ghost">Revise CSS</a>
+      </div>
+
+      <ul class="hero-stats">
+        <li><b>2</b><span>sections</span></li>
+        <li><b>20+</b><span>concepts</span></li>
+        <li><b>1</b><span>stylesheet</span></li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="chip chip-1">&lt;header&gt;</div>
+      <div class="chip chip-2">flex</div>
+      <div class="chip chip-3">grid</div>
+      
+      <div class="chip chip-4">@media</div>
+      <div class="chip chip-5">:hover</div>
+      <div class="chip chip-6">&lt;form&gt;</div>
+      <div class="chip chip-7">css box model</div>
+    </div>
+  </section>
+
+  <!-- ============ HTML SECTION ============ -->
+  <section id="html" class="section">
+    <header class="section-head">
+      <span class="tag tag-html">01 · HTML5</span>
+      <h2>The building blocks</h2>
+      <p>Every page is boxes inside boxes. Something I wish I learnt early. Here are the boxes worth remembering.</p>
+    </header>
+
+    <!-- Semantic tags -->
+    <article class="card">
+      <h3>Semantic tags</h3>
+      <p class="brief">Meaningful names beat <code>&lt;div&gt;</code> soup — for screen readers and future-you.</p>
+      <div class="semantic-demo">
+        <div class="s-header">header</div>
+        <div class="s-nav">nav</div>
+        <div class="s-main">
+          <div class="s-article">article</div>
+          <div class="s-aside">aside</div>
+        </div>
+        <div class="s-footer">footer</div>
+      </div>
+    </article>
+
+    <!-- Headings + text -->
+    <article class="card">
+      <h3>Headings &amp; text</h3>
+      <p class="brief">One <code>&lt;h1&gt;</code> per page. Then nest downward like an outline.</p>
+      <h1 class="demo-h">h1 — page title</h1>
+      <h2 class="demo-h">h2 — section</h2>
+      <h3 class="demo-h">h3 — sub-section</h3>
+      <p>Regular paragraph with <strong>strong</strong>, <em>em</em>,<i>italics</i>, <mark>mark</mark>, <a href="#">a link</a>, and <code>inline code</code>.</p>
+    </article>
+
+    <!-- Lists -->
+    <article class="card">
+      <h3>Lists</h3>
+      <p class="brief">Unordered, ordered, and described — pick the one that reads right out loud.</p>
+      <div class="two-col">
+        <div>
+          <h4>Unordered</h4>
+          <ul>
+            <li>Coffee</li><li>Tea</li><li>Water</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ordered</h4>
+          <ol>
+            <li>Wake up</li><li>Code</li><li>Sleep</li>
+          </ol>
+        </div>
+        <div>
+          <h4>Description</h4>
+          <dl>
+            <dt>HTML</dt><dd>Structure</dd>
+            <dt>CSS</dt><dd>Style</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tables -->
+    <article class="card">
+      <h3>Tables</h3>
+      <p class="brief">For tabular data only — never for layout. Ever.</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Common HTML tags</caption>
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Purpose</th>
+              <th>Empty?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;a&gt;</code></td>
+              <td>Link</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td><code>&lt;img&gt;</code></td>
+              <td>Image</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td><code>&lt;br&gt;</code></td>
+              <td>Line break</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td><code>&lt;section&gt;</code></td>
+              <td>Group</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- Forms -->
+    <article class="card" id="playground">
+      <h3>Forms &amp; inputs</h3>
+      <p class="brief">Labels matter. Types matter. Placeholders are not labels.</p>
+      <form class="demo-form" onsubmit="event.preventDefault(); this.querySelector('.form-msg').hidden = false;">
+        <div class="field">
+          <label for="fname">Full name</label>
+          <input id="fname" type="text" placeholder="Chill Michira" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="wantam@kasongo.com" required />
+        </div>
+        <div class="field">
+          <label for="level">Level</label>
+          <select id="level">
+            <option>Beginner</option><option>Intermediate</option><option>Pretending</option>
+          </select>
+        </div>
+        <fieldset class="field">
+          <legend>Favorite side</legend>
+          <label><input type="radio" name="side" checked /> HTML</label>
+          <label><input type="radio" name="side" /> CSS</label>
+        </fieldset>
+        <div class="field">
+          <label><input type="checkbox" required /> I read the docs (mostly)</label>
+        </div>
+        <div class="field">
+          <label for="notes">Notes</label>
+          <textarea id="notes" rows="3" placeholder="Anything to remember…"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <p class="form-msg" hidden>✓ Nice — that's exactly how a form should feel.</p>
+      </form>
+    </article>
+
+    <!-- Media -->
+    <article class="card">
+      <h3>Media</h3>
+      <p class="brief">Images, audio, video, and iframes — always give them meaningful alt/labels.</p>
+      <div class="media-grid">
+        <figure>
+          <div class="fake-img" role="img" aria-label="Sunset gradient">🌇</div>
+          <figcaption>&lt;figure&gt; + &lt;figcaption&gt;</figcaption>
+        </figure>
+        <figure>
+          <div class="fake-img alt" role="img" aria-label="Mountain">🏔️</div>
+          <figcaption>alt text is not optional. 🤐I used emojis not images😅</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ CSS SECTION ============ -->
+  <section id="css" class="section section-alt">
+    <header class="section-head">
+      <span class="tag tag-css">02 · CSS3</span>
+      <h2>Make it look intentional</h2>
+      <p>Colors, layout, motion, and the responsive tricks that carry every project.</p>
+    </header>
+
+    <!-- Selectors -->
+    <article class="card">
+      <h3>Selectors &amp; the box model</h3>
+      <p class="brief">Everything is a rectangle: <em>content · padding · border · margin</em>.</p>
+      <div class="box-model">
+        <div class="bm-margin">margin
+          <div class="bm-border">border
+            <div class="bm-padding">padding
+              <div class="bm-content">content</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Colors + typography -->
+    <article class="card">
+      <h3>Colors &amp; type</h3>
+      <p class="brief">Pick a palette, pick a pair of fonts, then stop tweaking.</p>
+      <div class="swatches">
+        <div class="sw" style="background:#0f172a"><span>#0f172a</span></div>
+        <div class="sw" style="background:#6366f1"><span>#6366f1</span></div>
+        <div class="sw" style="background:#22d3ee"><span>#22d3ee</span></div>
+        <div class="sw" style="background:#f97316"><span>#f97316</span></div>
+        <div class="sw" style="background:#f8fafc;color:#0f172a"><span>#f8fafc</span></div>
+      </div>
+    </article>
+
+    <!-- Flexbox -->
+    <article class="card">
+      <h3>Flexbox</h3>
+      <p class="brief">One-dimensional layouts. Rows or columns, aligned in one line of code.</p>
+      <div class="flex-demo">
+        <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+      </div>
+    </article>
+
+    <!-- Grid -->
+    <article class="card">
+      <h3>Grid</h3>
+      <p class="brief">Two-dimensional layouts. Rows <em>and</em> columns, mapped like a chessboard.</p>
+      <div class="grid-demo">
+        <div class="g-a">A</div>
+        <div class="g-b">B</div>
+        <div class="g-c">C</div>
+        <div class="g-d">D</div>
+      </div>
+    </article>
+
+    <!-- Pseudo + transitions -->
+    <article class="card">
+      <h3>:hover, :focus &amp; transitions</h3>
+      <p class="brief">Give feedback. Everything the mouse touches should whisper back.</p>
+      <div class="interactive-row">
+        <button class="btn btn-primary">Hover me</button>
+        <a href="" class="link-underline">Focus me (Tab ↹)</a>
+        <div class="hover-card">Lift on hover</div>
+      </div>
+    </article>
+
+    <!-- Dropdown -->
+    <article class="card">
+      <h3>Pure-CSS dropdown</h3>
+      <p class="brief">No JavaScript needed — just <code>:hover</code>, <code>:focus-within</code>, and a nested list.</p>
+      <nav class="drop-nav">
+        <ul class="drop-menu">
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#" aria-haspopup="true">Learn ▾</a>
+            <ul class="drop-sub">
+              <li><a href="#">HTML basics</a></li>
+              <li><a href="#">CSS basics</a></li>
+              <li><a href="#">Responsive design</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" aria-haspopup="true">Build ▾</a>
+            <ul class="drop-sub">
+              <li><a href="#">Landing page</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </article>
+
+    <!-- Animation -->
+    <article class="card">
+      <h3>Animations &amp; keyframes</h3>
+      <p class="brief"><code>@keyframes</code> for looping motion, <code>transition</code> for one-shots.</p>
+      <div class="anim-row">
+        <div class="anim pulse">pulse</div>
+        <div class="anim spin">spin</div>
+        <div class="anim float">float</div>
+      </div>
+    </article>
+
+    <!-- Responsive -->
+    <article class="card responsive-card">
+      <h3>Responsive web design</h3>
+      <p class="brief">
+        Design mobile-first, then let <code>@media</code> queries add breathing room on bigger screens.
+        Resize the browser — this grid rewires itself at <b>640px</b> and <b>960px</b>.
+      </p>
+      <div class="rwd-grid">
+        <div>📱 Mobile</div>
+        <div>💻 Tablet</div>
+        <div>🖥️ Desktop</div>
+        <div>📺 Wide</div>
+      </div>
+      <div class="viewport-badge">
+        <span class="v-mob">You are on: mobile</span>
+        <span class="v-tab">You are on: tablet/landscape mode</span>
+        <span class="v-desk">You are on: desktop</span>
+      </div>
+
+      <details class="tips">
+        <summary>Responsive checklist</summary>
+        <ul>
+          <li>Set the <code>&lt;meta viewport&gt;</code> tag.</li>
+          <li>Use relative units: <code>rem</code>, <code>%</code>, <code>vw</code>, <code>clamp()</code>.</li>
+          <li>Prefer <code>flex</code>/<code>grid</code> over fixed widths.</li>
+          <li>Images: <code>max-width: 100%; height: auto;</code>.</li>
+          <li>Test with real thumbs, not just Chrome DevTools.</li>
+        </ul>
+      </details>
+    </article>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div>
+      <p class="brand"><span class="brand-mark">&lt;/&gt;</span> Revise<strong>Web</strong></p>
+      <p class="muted">Built with plain HTML5 &amp; CSS3. View source — that's the whole point.</p>
+    </div>
+    <div class="foot-links">
+      <a href="#html">HTML</a>
+      <a href="#css">CSS</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
